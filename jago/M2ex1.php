@@ -1,9 +1,9 @@
 <?php
 function Cars() {
     //create local variable
-    $ferrariCount = 14; 
+    $ferrariCount = 14;
     echo "I have a total of $ferrariCount Ferrari's";
-} 
+}
 Cars();
 echo PHP_EOL;
 error_reporting(E_ALL);
