@@ -1,0 +1,5 @@
+CASE 1 : require_once because if your PHP program depends upon these functions you want to throw an error if the file is not included. Also, you only want the file one time because once the functions are in scope they won't need to be included again.
+
+CASE 2 : require_once because even though some may view javascript as non-essential, if a major part of the experience of the application is a rich, client-side interface, I would prefer the program to fail and throw an error if those files cannot be included. Also, you only require once because you only want to download the files one time.
+
+CASE 3 : include because it may not be essential and the program can stand without the html file. Also, since it will need to be included in more than one place you would not want to restrict it to include_once.
