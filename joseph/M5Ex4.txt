@@ -1,0 +1,1 @@
+Code results in a fatal error because a class cannot extend an interface
