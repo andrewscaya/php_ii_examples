@@ -4,6 +4,7 @@ function test()
 {
     return 'TEST';
 }
-//echo TEST;
-//echo PHP_EOL;
+echo 'This file was included' . PHP_EOL;
+echo TEST;
+echo PHP_EOL;
 

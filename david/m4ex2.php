@@ -2,20 +2,21 @@
 
 function makeArrayUpper(&$arrayToConvert = NULL) {
 
-	if ($arrayToConvert) 
-	{
-		foreach ($arrayToConvert as $key => $value) 
-		{
-			$arrayToConvert[$key] = strtoupper($value);
-		}
+    if ($arrayToConvert && is_array($arrayToConvert))
+    {
+        foreach ($arrayToConvert as $key => $value)
+        {
+            $arrayToConvert[$key] = strtoupper($value);
+        }
 
-		return true;
-	}
-	
-	return false;	
+        return true;
+    }
+
+    return false;
 }
 
 $array = explode(' ', 'Zend Training - Building Security into your PHP Applications');
+//$array = array();
 
 echo "LOWER CASE ARRAY: ";
 var_dump($array);
