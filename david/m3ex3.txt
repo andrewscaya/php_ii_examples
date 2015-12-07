@@ -1,0 +1,3 @@
+The result of the code is an error:
+
+ Notice: Undefined property: myClass2::$var in /workspace/phpiiecom/public/exercises/m5ex3.php on line 9
