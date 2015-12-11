@@ -4,6 +4,7 @@ class Test
     protected $values = array();
     public function __call($method, $params)
     {
+        echo $method . PHP_EOL;
         if ('get' == substr($method, 0, 3)) {
             $key = substr($method, 3);
             return (isset($this->values[$key])) ? $this->values[$key] : NULL;

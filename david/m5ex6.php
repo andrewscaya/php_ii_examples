@@ -1,7 +1,6 @@
 <?php
 
-include_once('classes/class.Product.php');
-include_once('FastMath/Basics/Product.php');
+include __DIR__ . '/autoload.php';
 
-$a = new classes\Product();
+$a = new Classes\Product();
 $b = new FastMath\Basics\Product(1, 2);
