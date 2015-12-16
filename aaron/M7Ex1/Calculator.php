@@ -1,24 +1,25 @@
 <?php
 
-class calculator {
-    protected $result;
+class Calculator 
+{
     
+    protected $result;    
     protected $operation;
     
-    public function setOperation(OperatorInterface $operation) {
+    public function setOperation(OperatorInterface $operation) 
+    {
         $this->operation = $operation;
         
     }
     
-    public function calculate() {
-        foreach (func_get_args() as $number) {
-            
-            $this->result = $this->operation->run($number, $this->result);
-            
-        }
+    public function calculate($number, $result = NULL) 
+    {
+        if (!$result) $result = $this->result;
+        $this->result = $this->operation->run($number, $result);
     }
     
-    public function getResult() {
+    public function getResult() 
+    {
         return $this->result;
     }
 

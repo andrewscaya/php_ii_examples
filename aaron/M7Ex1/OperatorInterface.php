@@ -1,5 +1,6 @@
 <?php
 
-interface OperatorInterface {
+interface OperatorInterface 
+{
     public function run($number, $result);
 }
