@@ -1,19 +1,21 @@
 <?php
-	$time = 1195248471;
-	$eTag = 'quack';
+    $time = 1195248471;
+    $eTag = 'quack';
 
-	if ($_SERVER['HTTP_IF_NONE MATCH']) 
-	{
-		$noneMatch = $_SERVER['HTTP_IF_NONE MATCH'];
-	}
-	else
-	{
-		$noneMatch = '';
-	}
+    // _SERVER["HTTP_IF_NONE_MATCH"]
+    if (isset($_SERVER['HTTP_IF_NONE_MATCH']))
+    {
+        $noneMatch = $_SERVER['HTTP_IF_NONE_MATCH'];
+    }
+    else
+    {
+        $noneMatch = '';
+    }
 
-	if ($noneMatch ==  $eTag) 
-	{
-		header('304 Not Modified', true, 304);
-	}
-
-	header("ETag: $eTag");
+    if ($noneMatch ==  $eTag)
+    {
+        header('304 Not Modified', true, 304);
+    } else {
+        header("ETag: $eTag");
+    }
+phpinfo(INFO_VARIABLES);
