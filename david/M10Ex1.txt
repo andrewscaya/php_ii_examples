@@ -1,0 +1,13 @@
+Without looking at the code, I would have to say the best way to ensure security is to use security best practices:
+ 
+ 1) Input should be validated on the server. 
+ 2) Output should be escaped.
+ 3) Use the principle of least privilege. Give users the bare minimum of 
+    permissions to complete their tasks.
+ 4) Set php.ini to not display errors in a production environment.
+ 5) Initialize all variables.
+ 6) Check that variables are set (isset).
+ 7) Only pass identifiers of cookies, not the actual data. Set $httponly 
+    parameter to "true" in setcookie().
+ 8) Use debugging techniques instead of echo or print to check if you get 
+    the expected output from your code. Be sure to check the logs for error output.
