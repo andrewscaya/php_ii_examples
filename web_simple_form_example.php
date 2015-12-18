@@ -6,10 +6,17 @@
 </head>
 <body>
 <form method="post">
-<input type="text" name="address" />
-<input type="submit" />
+Address: <input type="text" name="address" />
+<br>Number 1: <input type="number" name="number1" />
+<br>Number 2: <input type="text" name="number2" />
+<br><input type="submit" />
 </form>
-<?php echo $_SERVER["HTTP_ACCEPT"]; ?>
+<?php if (isset($_POST['number2'])) : ?>
+<br><?php echo (preg_match('/^\d+$/', $_POST['number2'])) ? 'NUMERIC DATA' : 'NON-NUMERIC DATA'; ?>
+<!-- NOTE: no begin (^) or end ($) symbols: -->
+<br><?php echo (preg_match('/\d+/', $_POST['number2'])) ? 'NUMERIC DATA' : 'NON-NUMERIC DATA'; ?>
+<br><?php var_dump($_POST['number2']); ?>
+<?php endif; ?>
 <?php phpinfo(INFO_VARIABLES); ?>
 </body>
 </html>
